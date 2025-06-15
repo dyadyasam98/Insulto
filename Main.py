@@ -39,7 +39,7 @@ def name_phrase(name, sex, mat_or_not):
 
 def read_insalto(the_file):
     try:
-        file_to_read = open(str(the_file), 'r')
+        file_to_read = open(the_file, 'r')
         lines = file_to_read.readlines()
         for line in lines:
             print(line)
@@ -47,7 +47,7 @@ def read_insalto(the_file):
         print("Ошибка! Что-то пошло не так.")
 
 logs = open('logs.txt', 'a')
-
+number = 0
 def generate_insalto(number, user_name, user_sex, are_you_ready):
     insultion = name_phrase(user_name, user_sex, are_you_ready)
     logs.write(f'{number}. Name: {user_name}, Sex: {user_sex}, {insultion}')
@@ -55,8 +55,7 @@ def generate_insalto(number, user_name, user_sex, are_you_ready):
 
 start_prog = input('Введите /generate_insulto, если схотите сгенерировать оскорбления. Или введите /print_all_insulto, если хотите увидеть уже имеющиеся оскорбления: ')
 if start_prog == '/generate_insulto':
-    r = input("Если вы поддерживаете использование мата, то введите: похуй, в противном случае введите: Экскьюзми")
-    number = 0
+    r = input("Если вы поддерживаете использование мата, то введите: похуй, в противном случае введите Экскьюзми: ")
     while True:
         number += 1
         user_name = input('Введите имя: ')
@@ -69,4 +68,4 @@ if start_prog == '/generate_insulto':
         else:
             insultion = generate_insalto(number, user_name, user_sex, False)
 elif start_prog == '/print_all_insulto':
-   read_insalto(logs)
+   read_insalto('logs.txt')

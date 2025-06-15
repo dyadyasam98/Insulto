@@ -1,5 +1,4 @@
 from Entities import InsultoTree
-from Entities import InsultoTree_female
 import random as rnd
 
 # Мужское дерево
@@ -58,6 +57,8 @@ Piz.next_words.append(Ili)
 Mat = InsultoTree("")
 Not_mat = InsultoTree("")
 
+
+
 Not_mat.next_words.append(Sov)
 Not_mat.next_words.append(Och)
 Not_mat.next_words.append(Nem)
@@ -77,33 +78,33 @@ You.next_words.append(Not_mat)
 
 #Женское дерево
 # Листья:
-f_pri = InsultoTree_female("придурошная")
-f_dur = InsultoTree_female("дура")
-f_tor = InsultoTree_female("тормоз")
+f_pri = InsultoTree("придурошная")
+f_dur = InsultoTree("дура")
+f_tor = InsultoTree("тормоз")
 
-f_glu = InsultoTree_female("глупая")
-f_ned = InsultoTree_female("недалекая")
+f_glu = InsultoTree("глупая")
+f_ned = InsultoTree("недалекая")
 
-f_toop = InsultoTree_female("туповата")
-f_ots = InsultoTree_female("отсталая")
+f_toop = InsultoTree("туповата")
+f_ots = InsultoTree("отсталая")
 
-f_shl = InsultoTree_female("шлюха")
-f_Pzd = InsultoTree_female("пизда")
+f_shl = InsultoTree("шлюха")
+f_Pzd = InsultoTree("пизда")
 
-f_ovc = InsultoTree_female("овца")
-f_mrz = InsultoTree_female("мразь")
+f_ovc = InsultoTree("овца")
+f_mrz = InsultoTree("мразь")
 
-f_jen = InsultoTree_female("В зеркало смотрела? Ну и где там женщина?")
-f_Ili = InsultoTree_female("Или тебя действительно назвали таким уебанским именем?)))")
+f_jen = InsultoTree("В зеркало смотрела? Ну и где там женщина?")
+f_Ili = InsultoTree("Или тебя действительно назвали таким уебанским именем?)))")
 # ветки:
 
-f_Sov = InsultoTree_female("совсем")
-f_Och = InsultoTree_female("очень")
-f_Nem = InsultoTree_female("немного")
+f_Sov = InsultoTree("совсем")
+f_Och = InsultoTree("очень")
+f_Nem = InsultoTree("немного")
 
-f_Kon = InsultoTree_female("конченная")
-f_Eba = InsultoTree_female("ебанутая")
-f_Piz = InsultoTree_female("же пиздишь!")
+f_Kon = InsultoTree("конченная")
+f_Eba = InsultoTree("ебанутая")
+f_Piz = InsultoTree("же пиздишь!")
 
 f_Sov.next_words.append(f_pri)
 f_Sov.next_words.append(f_dur)
@@ -121,8 +122,8 @@ f_Piz.next_words.append(f_jen)
 f_Piz.next_words.append(f_Ili)
 
 # мат / не мат
-f_Mat = InsultoTree_female("")
-f_Not_mat = InsultoTree_female("")
+f_Mat = InsultoTree("")
+f_Not_mat = InsultoTree("")
 
 f_Not_mat.next_words.append(f_Sov)
 f_Not_mat.next_words.append(f_Och)
@@ -136,7 +137,7 @@ f_Mat.next_words.append(f_Piz)
 
 # корень:
 
-f_You = InsultoTree_female("ты")
+f_You = InsultoTree("ты")
 
 f_You.next_words.append(f_Not_mat)
 f_You.next_words.append(f_Mat)
